@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="orb orb-purple"></div>
+        <div class="orb orb-blue"></div>
+    </div>
+
+    <main class="glass-container">
+        <header class="header-block">
+            <h2>Investment Dashboard</h2>
+            <div class="sub-header">Calculate Your Growth</div>
+        </header>
+
+        <section class="input-section">
+            <div class="panel-flex">
+                <div>
+                    <label for="starting-amount">Starting Investment</label>
+                    <div class="input-wrapper">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="starting-amount" placeholder="0" value="1000">
+                    </div>
+                </div>
+                <div>
+                    <label for="growth-rate">Growth Rate</label>
+                    <select id="growth-rate">
+                        <option value="1.2">Low (1.2x)</option>
+                        <option value="1.5">Medium (1.5x)</option>
+                        <option value="2.0">High (2.0x)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="track-bg">
+                <div class="track-fill" id="progress-bar"></div>
+            </div>
+            <div class="scale-markers">
+                <span>$0</span>
+                <span>Progress to $10k Goal</span>
+                <span>$10k+</span>
+            </div>
+        </section>
+
+        <label for="bonus-toggle" class="switch-card">
+            <div class="meta-desc">
+                <span class="heading-main">VIP Bonus Rate</span>
+                <span class="sub-desc">Boost total profit by +15%</span>
+            </div>
+            <div class="toggle-switch">
+                <input type="checkbox" id="bonus-toggle">
+                <div class="slider-node"></div>
+            </div>
+        </label>
+
+        <section class="results-panel" id="results-panel">
+            <div class="results-row">
+                <span>Plan Status</span>
+                <span class="badge active" id="status-badge">Standard</span>
+            </div>
+            <div class="results-row">
+                <span>Total Profit</span>
+                <span class="badge" id="profit-badge">+$0.00</span>
+            </div>
+            
+            <div class="final-balance-row">
+                <div class="total-label">Final Balance</div>
+                <div class="numeric-display" id="final-balance">$0.00</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
